@@ -1,0 +1,45 @@
+---
+title: "Sorting Algorithms"
+output: 
+  html_document:
+    code_folding: hide
+---
+
+# Sorting Algorithms in R
+This notebook contains notes and examples of sorting algorithms by Inle Bush. It describes and gives R code for Selection Sort.
+
+## Selection Sort
+* in-place comparison sorting algorithm
+
+* **Description**:
+    * Creates a sorted (initially empty) and unsorted (input list) list. 
+    * Iteratively adds the minimum from the unsorted list to the sorted list.
+
+* **Worst case**: 
+    * O($n^2$) comparisons
+    * O($n$) swaps
+
+```{r Selection Sort}
+sample(1:10)
+
+selection_sort <- function(v) {
+  for (i in 1:(length(v) - 1)) { # i is first index of unsorted list
+    
+    jmin <- i # Initially sets minimum to element at i 
+    
+    for (j in (i + 1):length(v)) { # Loops through items after i
+      if (v[[j]] < v[[jmin]]) jmin <- j # If item is smaller than current min, set min to item
+    }
+    
+    if (jmin != i) { # Does not swap i and jmin if jmin is i
+      v[c(i, jmin)] <- v[c(jmin, i)] # Switches jmin and i items
+    }
+    print(v)
+  }
+}
+
+#Testing
+print('Example:')
+print(vect <- sample(1:10))
+selection_sort(vect)
+```
