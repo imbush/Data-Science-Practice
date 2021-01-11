@@ -1,4 +1,5 @@
 class Stack:
+    '''Stack implementation using list'''
     def __init__(self, values: list):
         self.values = values
 

@@ -1,4 +1,4 @@
-from linked_list import Node
+from dlinked import Node
 
 
 class Queue:
