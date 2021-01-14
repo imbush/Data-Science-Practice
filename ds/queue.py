@@ -2,6 +2,7 @@ from dlinked import Node
 
 
 class Queue:
+    '''Queue implementation using doubly linked list'''
     def __init__(self):
         self.last = None
         self.first = None

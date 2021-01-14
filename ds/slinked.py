@@ -64,7 +64,7 @@ class SLinkedList:
         while fast is not None and fast.next_node is not None:
             if fast == slow:
                 meets += 1
-                if meets > 2:  # Occurs if data not in list and list is cycle
+                if meets > 2:       # Occurs if data not in list and list is cycle
                     raise ValueError("data must be contained in list")
 
             if slow.data == data:
