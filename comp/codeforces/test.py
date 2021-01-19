@@ -1,1 +1,1 @@
-print(range(5))
+print(ord("B"))
