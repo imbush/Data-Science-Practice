@@ -1,2 +1,1 @@
-k = "1001"
-print([int(x) for x in k])
+print(5 * bool(0))
