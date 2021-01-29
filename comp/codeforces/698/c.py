@@ -1,3 +1,4 @@
+# Time limit exceeded on test 17 (1 test, large ds)
 t = int(input())
 output = []
 for i in range(t):
@@ -16,7 +17,7 @@ for i in range(t):
         for i in range(two_n, 0, -2):
             d = ds.pop()
             diff = 2 * ds.pop() // i
-            if d % i == 0 and d != 0 and diff != last:
+            if d % i == 0 and d > 0 and diff != last:
                 last = diff
                 for j in range(len(ds)):
                     ds[j] -= diff

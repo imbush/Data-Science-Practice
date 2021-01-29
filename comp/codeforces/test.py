@@ -1,1 +1,2 @@
-print(2 ** 47)
+out = [1, 2, 3, 4, 5]
+print(" ".join([str(x) for x in out]))
