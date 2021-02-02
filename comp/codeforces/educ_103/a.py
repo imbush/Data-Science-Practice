@@ -1,11 +1,10 @@
+from math import ceil
 t = int(input())
 output = []
 for _ in range(t):
     n, k = [int(x) for x in input().split()]
-    new_k = k
-    while new_k < n:
-        new_k += k
-    k = new_k
+    if k < n:
+        k = k * ceil(n / k)
 
     if k % n == 0:
         output.append(k // n)
