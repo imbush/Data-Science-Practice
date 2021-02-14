@@ -6,13 +6,14 @@ for i in range(t):
     la = [int(x) for x in input().split()]
     lb = [int(x) for x in input().split()]
     dam = 0
+    maximum = 0
     for i in range(n):
-        dam += la[i] * math.ceil(lb[i] / a)
-    if dam >= b + max(la):
+        maximum = max(maximum, la[i])
+        dam += la[i] * ((lb[i] + a - 1) // a)
+    if dam >= b + maximum:
         output.append("NO")
     else:
-        output.append("YES") 
-
+        output.append("YES")
 
 for out in output:
     print(out)
