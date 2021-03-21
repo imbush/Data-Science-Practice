@@ -1,9 +1,6 @@
 n = int(input())
-bosses = [-1]
-bosses.extend([int(x) - 1 for x in input().split()])
+bosses = [int(x) - 1 for x in input().split()]
 subs = [0] * n
-for boss in bosses:
-    while boss >= 0:
-        subs[boss] += 1
-        boss = bosses[boss]
-print(" ".join(map(str, subs)))
+for i in range(n-1, 0, -1):
+    subs[bosses[i - 1]] += subs[i] + 1
+print(*subs)
