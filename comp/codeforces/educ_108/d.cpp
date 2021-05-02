@@ -67,5 +67,5 @@ int main() {
     for (int i=0; i < n; i++) {
         prods_sum += prods[i];
     }
-    cout << prods_sum + max_diff;
+    cout << (prods_sum + max_diff);
 }

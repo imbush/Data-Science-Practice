@@ -1,0 +1,1 @@
+print(*[[i,a:="Fizz",b:="Buzz",a+b][(0==i%3)+2*(i%5==0)] for i in range(1,101)],sep="\n")
